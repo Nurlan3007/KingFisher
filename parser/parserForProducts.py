@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from connectToDb import cursor,conn
+from parser.parserForCategoryInsertDb import getPageAndSoup
 import re
 
 MAIN_URL = "https://kingfisher.kz"
@@ -10,11 +11,6 @@ headers = {
     "User-agent" : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
 }
 
-def getPageAndSoup(URL):
-    req = requests.get(URL, headers=headers)
-    src = req.text
-    soup = BeautifulSoup(src, "lxml")
-    return soup
 
 def getCategories():
     cursor.execute("SELECT * FROM sub_categories")
@@ -65,9 +61,10 @@ def getAllProductsAndInsertToDb(sub_categories):
 
 
 
-sub_categories = getCategories()
-getAllProductsAndInsertToDb(sub_categories)
-conn.commit()
+if __name__ == "__main__":
+    sub_categories = getCategories()
+    getAllProductsAndInsertToDb(sub_categories)
+    conn.commit()
 
 
 

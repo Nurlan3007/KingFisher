@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5438:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_DB: kingFisher
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro # SQL-скрипт для инициализации
+      - ./data:/data:ro # Папка с данными для загрузки
+
+volumes:
+  postgres_data:

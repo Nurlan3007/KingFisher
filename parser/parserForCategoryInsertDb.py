@@ -46,7 +46,8 @@ def getCategoriesAndInsertToDb(soup):
         conn.commit()
         print('####')
 
-if __name__ ==  'main':
+print(__name__)
+if __name__ == "__main__":
     soup = getPageAndSoup(MAIN_URL)
     getCategoriesAndInsertToDb(soup)
 
