@@ -1,22 +1,30 @@
 version: '3.8'
 
 services:
-  postgres:
-    image: postgres:latest
+  db:
+    image: postgres:15
     container_name: postgres_container
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "5438:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 12345
-      POSTGRES_DB: kingFisher
+      POSTGRES_DB: king_fisher1
+    ports:
+      - "5438:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro # SQL-скрипт для инициализации
-      - ./data:/data:ro # Папка с данными для загрузки
+      - db_data:/var/lib/postgresql/data
+    restart: always
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_container
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    restart: always
+    depends_on:
+      - db
 
 volumes:
-  postgres_data:
+  db_data:
