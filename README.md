@@ -22,11 +22,13 @@
   ├── /parser                  # Папка с файлами парсера
   │   ├── parserForCategoryInsertDb.py   # Парсер для извлечения категорий и подкатегорий
   │   └── parserForProducts.py          # Парсер для извлечения данных товаров
+  |   └── connectToDb.py 
   │
   ├── /analysis                # Папка с анализом данных
   │   ├── top_10Price.py       # Скрипт для построения графика с ценами
   │   └── count_vs_price.py    # Скрипт для построения графика рассеяния
-  │
+  │   └── top10_products.py
+  |   └── connectToDb.py
   └── README.md               # Этот файл
     </pre>
   <p>
