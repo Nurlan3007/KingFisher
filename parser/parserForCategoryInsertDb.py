@@ -1,5 +1,7 @@
 # сначала мы должный получить категории чтобы дальнейши мы могли по ним искать продукты
-# 
+# потом 
+
+
 import requests
 from bs4 import BeautifulSoup
 from connectToDb import cursor,conn

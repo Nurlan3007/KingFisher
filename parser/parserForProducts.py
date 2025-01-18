@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from connectToDb import cursor,conn
-from parser.parserForCategoryInsertDb import getPageAndSoup
+from parserForCategoryInsertDb import getPageAndSoup
 import re
 
 MAIN_URL = "https://kingfisher.kz"
