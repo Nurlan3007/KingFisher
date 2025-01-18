@@ -32,12 +32,15 @@
 <p>
    <h3>Шаг 1</h3>
    <p>
-     Сначала нужно подключиться к базе дданных  в папке postgres есть docker-compose.yml, 
-     запускаем команда docker compose up
-     password db = 12345
-     db name = king_fisher1
-     db user = postgres
-     db port = 5438:5432
+     Сначала нужно подключиться к базе дданных в папке postgres есть docker-compose.yml, 
+     запускаем команду <br>
+	`docker compose up`
+	<ul>
+		<li>password db = 12345</li>
+		<li>db name = king_fisher1</li>
+		<li>db user = postgres</li>
+		<li>db port = 5438:5432</li>
+     </ul>
      подключаемся и вставляем sql code из sqlCode.sql
    </p>
    <h3>Шаг 2</h3>
@@ -51,9 +54,9 @@
       2. Потом я достаю все подкатегории и ссылки из БД обьелиняю с главное ссылкой https://kingfisher.kz/ при помощи конкатенации и достаю каждую страницы подкатегории например "Морепродукты креветки" https://kingfisher.kz/moreprodukty/ + krevetki/ (Файл parserForProducts.py)
      		
    </p>
-   
-  
 </p>
+<h1>Анализ</h1>
+<p></p>
 
 
 
