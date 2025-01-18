@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>README</title>
+  <title>README - О проекте</title>
 </head>
 <body>
-  <h1>About the Project</h1>
+  <h1>О проекте</h1>
   <p>
     Это тестовое задание для дуального обучения студента Марата Нурлана Бда-2302.
     Задача - парсер для получения данных с сайта <a href="https://kingfisher.kz/" target="_blank">Kingfisher.kz</a>.
@@ -59,7 +59,7 @@ docker compose up
     Параметры базы данных:
     <ul>
       <li><b>Пароль:</b> 12345</li>
-      <li><b>Имя базы:</b> king_fisher1</li>
+      <li><b>Имя базы данных:</b> king_fisher1</li>
       <li><b>Пользователь:</b> postgres</li>
       <li><b>Порт:</b> 5438:5432</li>
     </ul>
@@ -82,7 +82,11 @@ docker compose up
 
   <h1>Анализ</h1>
   <p>
-    Визуализация данных выполняется с помощью библиотеки Matplotlib для построения графиков и анализа цен, рейтингов и других характеристик товаров.
+    Визуализация данных выполняется с помощью библиотеки Matplotlib для построения графиков и анализа. В папке <code>analysis</code> находятся два файла:
+    <ul>
+      <li><b>top_10Price.py</b> — в этом файле получаем из базы данных сумму всех цен и количество товаров в каждой подкатегории и строим график.</li>
+      <li><b>count_vs_price.py</b> — строится график типа scatter для визуализации того, что большое количество товаров в подкатегории не всегда означает, что эта подкатегория будет самой дорогой.</li>
+    </ul>
   </p>
 </body>
 </html>
