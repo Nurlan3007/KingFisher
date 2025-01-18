@@ -1,8 +1,8 @@
 import psycopg2
 
 
-conn = psycopg2.connect(dbname='kingFisher', user='postgres', 
-                        password='root', host='localhost', port="5433")
+conn = psycopg2.connect(dbname='king_fisher1', user='postgres', 
+                        password='12345', host='localhost', port="5438")
 cursor = conn.cursor()
 
 
