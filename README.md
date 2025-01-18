@@ -9,7 +9,7 @@
   2. Хранение данных в PostgreSQL: создание базы данных и таблиц для хранения информации.
   3. Визуализация данных: построение графиков и диаграмм для анализа цен, рейтингов и других характеристик товаров.
 </p>
-<h1>Technologies</h1>
+<h1>Технологии</h1>
 <p>
   <ul>
     <li>Postgresql</li>
@@ -28,7 +28,7 @@
   pip install psycopg2 pandas matplotlib beautifulsoup4 lxml requests
 </p>
 
-<h1>How To start a parser</h1>
+<h1>Как запустить парсер</h1>
 <p>
    <h3>Шаг 1</h3>
    <p>
